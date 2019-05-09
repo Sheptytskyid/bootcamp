@@ -1,4 +1,4 @@
-package bootcamp;
+package module1.classwork;
 
 public class App {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package bootcamp;
+package module1;
 
 import static org.junit.Assert.assertTrue;
 
