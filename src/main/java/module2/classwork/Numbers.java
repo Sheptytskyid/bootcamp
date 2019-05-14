@@ -1,6 +1,5 @@
 package module2.classwork;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Numbers {
@@ -25,15 +24,16 @@ public class Numbers {
         //second type of array assignment
         int[] intArray2 = {11, 12, 13, 15, 16, 17, 18};
         System.out.println(Arrays.toString(intArray2));
-        flipFirstElements(intArray2);
+        flipFirstElement(intArray2);
+        flipFirst3Elements(intArray2);
 
         int[] intArray3 = {11, 12, 13, 15, 16, 17, 18, 19, 20, 21};
         System.out.println(Arrays.toString(intArray2));
-        flipFirstElements(intArray3);
-
+        flipFirstElement(intArray3);
+        flipFirst3Elements(intArray2);
     }
 
-    static void flipFirstElements(int[] array) {
+    static void flipFirstElement(int[] array) {
         int temp = array[array.length  - 1];
         array[array.length  - 1] = array[0];
         array[0] = temp;
@@ -41,7 +41,19 @@ public class Numbers {
     }
 
     static void flipFirst3Elements(int[] array) {
-
+        if (array.length < 6) {
+            System.out.println("Array is too small");
+        } else {
+            int temp0 = array[0];
+            int temp1 = array[1];
+            int temp2 = array[2];
+            array[0] = array[array.length - 1];
+            array[1] = array[array.length - 2];
+            array[2] = array[array.length - 3];
+            array[array.length - 1] = temp0;
+            array[array.length - 2] = temp1;
+            array[array.length - 3] = temp2;
+        }
     }
-
+    
 }
