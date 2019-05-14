@@ -34,10 +34,14 @@ public class Numbers {
     }
 
     static void flipFirstElement(int[] array) {
-        int temp = array[array.length  - 1];
-        array[array.length  - 1] = array[0];
-        array[0] = temp;
-        System.out.println(Arrays.toString(array));
+        if (array.length < 2) {
+            System.out.println("Array is too small");
+        } else {
+            int temp = array[array.length  - 1];
+            array[array.length  - 1] = array[0];
+            array[0] = temp;
+            System.out.println(Arrays.toString(array));
+        }
     }
 
     static void flipFirst3Elements(int[] array) {
