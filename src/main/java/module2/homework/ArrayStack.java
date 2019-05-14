@@ -2,8 +2,8 @@ package module2.homework;
 
 public class ArrayStack {
 
-    int[] stack;
-    int position;
+    private int[] stack = new int[10];
+    private int position;
 
     //stack = LIFO
     //[_, _, _, _, _]
@@ -29,5 +29,9 @@ public class ArrayStack {
         }
 
         return 0;
+    }
+    
+    void printStack() {
+        System.out.println(Arrays.toString(stack));
     }
 }
