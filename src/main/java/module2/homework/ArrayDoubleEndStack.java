@@ -1,5 +1,7 @@
 package module2.homework;
 
+import java.util.Arrays;
+
 public class ArrayDoubleEndStack {
 
     private int[] doubleEndStack = new int[10];
