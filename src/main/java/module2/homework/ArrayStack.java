@@ -1,5 +1,7 @@
 package module2.homework;
 
+import java.util.Arrays;
+
 public class ArrayStack {
 
     private int[] stack = new int[10];
