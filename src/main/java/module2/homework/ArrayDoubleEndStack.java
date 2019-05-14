@@ -2,16 +2,15 @@ package module2.homework;
 
 public class ArrayDoubleEndStack {
 
-    int[] doubleEndStack;
-
-    //[______16,0,15_______}
+    private int[] doubleEndStack = new int[10];
+    //[______16,| 15_______}
     //[_, _, _,| _, _, _]
 
-    void addLeft() {
+    void addLeft(int number) {
 
     }
 
-    void addRight() {
+    void addRight(int number) {
 
     }
 
@@ -21,5 +20,9 @@ public class ArrayDoubleEndStack {
 
     int removeRight() {
         return 0;
+    }
+    
+    void printStack() {
+        System.out.println(Arrays.toString(doubleEndStack));
     }
 }
