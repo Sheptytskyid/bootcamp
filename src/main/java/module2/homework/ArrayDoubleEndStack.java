@@ -3,6 +3,8 @@ package module2.homework;
 public class ArrayDoubleEndStack {
 
     private int[] doubleEndStack = new int[10];
+    private int rightPosition;
+    private int leftPosition;
     //[______16,| 15_______}
     //[_, _, _,| _, _, _]
 
