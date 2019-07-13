@@ -11,16 +11,16 @@ public class MultidimArrays {
         int b = a;
 
         //reference types
-        int[] array = {1,2,3};
+        int[] array = {1, 2, 3};
         int[] copy = array;
 
         System.out.println("Primitive types:");
         System.out.println("a is " + a);
-        System.out.println("b is "+ b);
+        System.out.println("b is " + b);
         System.out.println("---------------------");
         a = 4;
         System.out.println("a is " + a);
-        System.out.println("b is "+ b);
+        System.out.println("b is " + b);
 
 
         System.out.println("\nReference types:");

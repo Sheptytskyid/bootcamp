@@ -17,10 +17,11 @@ class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-               "color='" + color + '\'' +
-               ", horsepowers=" + horsepowers +
-               ", maxSpeed=" + maxSpeed +
-               '}';
+        final StringBuilder sb = new StringBuilder("Car{");
+        sb.append("color='").append(color).append('\'');
+        sb.append(", horsepowers=").append(horsepowers);
+        sb.append(", maxSpeed=").append(maxSpeed);
+        sb.append('}');
+        return sb.toString();
     }
 }

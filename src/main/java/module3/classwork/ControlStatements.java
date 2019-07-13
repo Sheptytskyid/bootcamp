@@ -61,8 +61,6 @@ public class ControlStatements {
             System.out.println();
         } else if (!(a < b)) {
             System.out.println();
-        } else if (a % 2 > 0) {
-
         }
 
         switch (a) {
