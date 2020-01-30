@@ -1,4 +1,4 @@
-package algorythms.graph;
+package algorithms.graph;
 
 import java.util.HashMap;
 import java.util.LinkedHashSet;
@@ -14,9 +14,7 @@ public class Graph {
 
     void add(String label) {
         Vertex vertex = new Vertex(label);
-        if (!graph.containsKey(vertex)) {
-            graph.put(vertex, new LinkedHashSet<>());
-        }
+        graph.putIfAbsent(vertex, new LinkedHashSet<>());
     }
 
     void remove(String label) {
@@ -38,7 +36,7 @@ public class Graph {
     Set<String> breadthFirstSearch(String root) {
         Set<String> visited = new LinkedHashSet<>();
         Queue<String> queue = new LinkedList<>();
-        queue.add(root);
+        queue.offer(root);
         while (!queue.isEmpty()) {
             String vertex = queue.poll();
             for (Vertex v : getAdjVertices(vertex)) {
@@ -54,7 +52,7 @@ public class Graph {
     Set<String> depthFirstSearch(String root) {
         Set<String> visited = new LinkedHashSet<>();
         Stack<String> stack = new Stack<>();
-        stack.add(root);
+        stack.push(root);
         while (!stack.isEmpty()) {
             String vertex = stack.pop();
             for (Vertex v : getAdjVertices(vertex)) {

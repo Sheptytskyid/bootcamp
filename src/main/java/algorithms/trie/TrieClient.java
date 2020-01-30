@@ -1,4 +1,4 @@
-package algorythms.trie;
+package algorithms.trie;
 
 public class TrieClient {
 
