@@ -32,14 +32,15 @@ public class MaxDistanceFromOrigin {
             );
         }
         if (instructions.charAt(index) == curDirection || curDirection == 'U') { //Moving away from the origin
+            curDistance++;
             curDirection = instructions.charAt(index);
-            maxDistance = Math.max(++curDistance, maxDistance);
         } else { // moving towards the origin
             curDistance--;
             if (curDistance == 0) { //have we reached the origin in the current step?
                 curDirection = 'U';
             }
         }
+        maxDistance = Math.max(curDistance, maxDistance);
         return maxDistance(instructions, ++index, maxDistance, curDistance, curDirection);
     }
 }
