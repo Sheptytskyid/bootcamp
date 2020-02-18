@@ -33,14 +33,13 @@ public class LongestRepeatableChar {
         if (pos >= input.length()) {
             return new int[] {maxpos, maxlen};
         }
-        if (input.charAt(pos) == input.charAt(pos - 1)) {
-            return helper(input, ++pos, ++len, maxpos, maxlen);
-        } else {
+        if (input.charAt(pos) != input.charAt(pos - 1)) {
             if (maxlen < len) {
                 maxlen = len;
                 maxpos = pos - len;
             }
-            return helper(input, ++pos, 1, maxpos, maxlen);
+            len = 0;
         }
-    }
+            return helper(input, ++pos, ++len, maxpos, maxlen);
+        }
 }
