@@ -35,30 +35,20 @@ public class SmallestSubstringWithAllCharsOfString {
             return 0;
         }
         // Count all distinct characters.
-        boolean[] visited = new boolean[256];
-        int distinct = 0;
-        for (int i = 0; i < str.length(); i++) {
-            if (!visited[str.charAt(i)]) {
-                visited[str.charAt(i)] = true;
-                distinct++;
-            }
-        }
+        int distinct = ((int) str.chars().distinct().count());
 
         int start = 0;
         int minLen = Integer.MAX_VALUE;
         int count = 0;
         int[] charCount = new int[256];
         for (int i = 0; i < str.length(); i++) {
-            charCount[str.charAt(i)]++;
-
-            if (charCount[str.charAt(i)] == 1) {
+            if (++charCount[str.charAt(i)] == 1) {
                 count++;
             }
 
             if (count == distinct) {
                 while(charCount[str.charAt(start)] > 1) {
-                    charCount[str.charAt(start)]--;
-                    start++;
+                    charCount[str.charAt(start++)]--;
                 }
                 minLen = Math.min(minLen, i - start + 1);
             }
