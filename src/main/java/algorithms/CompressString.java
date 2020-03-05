@@ -19,18 +19,15 @@ public class CompressString {
             return input;
         }
         StringBuilder output = new StringBuilder();
-        output.append(input.charAt(0));
-        int count = 1;
-        for (int i = 1; i < input.length(); i++) {
-            if (input.charAt(i) == input.charAt(i - 1)) {
-                count++;
-            } else {
-                output.append(count);
+        int count = 0;
+        for (int i = 0; i < input.length(); i++) {
+            count++;
+            if (i + 1 >= input.length() || input.charAt(i) != input.charAt(i + 1)) {
                 output.append(input.charAt(i));
-                count = 1;
+                output.append(count);
+                count = 0;
             }
         }
-        output.append(count);
         return output.length() < input.length() ? output.toString() : input;
     }
 }
