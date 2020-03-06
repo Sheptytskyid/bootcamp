@@ -40,13 +40,4 @@ public class PartitionLinkedList {
         tail.next = null;
         return head;
     }
-
-    private static class Node {
-        int data;
-        Node next;
-
-        public Node(int data) {
-            this.data = data;
-        }
-    }
 }
